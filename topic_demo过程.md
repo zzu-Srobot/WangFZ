@@ -134,7 +134,7 @@ vi gps.msg
   ```
 
 ### 小任务
-  + 利用`rplidar`软件，修改`listener.cpp`节点。
+  + 修改`listener.cpp`节点。
   + 修改后的节点实现的功能实现的功能为：订阅`rplidar`发布的对应话题。并利用该话题当中的有用数据。显示雷达扫描到的前方的遮挡物距离雷达的距离
   
   + rplidar链接： http://wiki.ros.org/rplidar
