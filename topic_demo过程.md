@@ -110,13 +110,17 @@ vi gps.msg
   
   include_directories(include ${catkin_INCLUDE_DIRS}) #头文件路径
   
+  #需要更改的部分
   add_executable(talker src/talker.cpp) #生成可执行文件talker
+  
   add_dependencies(talker topic_demo_generate_messages_cpp)
   #表明在编译talker前，必须先编译完成自定义消息
   #必须添加add_dependencies，否则找不到自定义的msg产生的头文件
   target_link_libraries(talker ${catkin_LIBRARIES}) #链接
   
+  #需要更改的部分
   add_executable(listener src/listener.cpp ) #生成可执行文件listener
+  
   add_dependencies(listener topic_demo_generate_messages_cpp)
   target_link_libraries(listener ${catkin_LIBRARIES})#链接
   ```
@@ -129,4 +133,44 @@ vi gps.msg
   <exec_depend>message_runtime</run_depend>
   ```
 
-### 
+### 小任务
+  + 利用`rplidar`软件，修改`listener.cpp`节点。
+  + 修改后的节点实现的功能实现的功能为：订阅`rplidar`发布的对应话题。并利用该话题当中的有用数据。显示雷达扫描到的前方的遮挡物距离雷达的距离
+  
+  + rplidar链接： http://wiki.ros.org/rplidar
+  + 
+  ```
+  # Single scan from a planar laser range-finder
+  #
+  # If you have another ranging device with different behavior (e.g. a sonar
+  # array), please find or create a different message, since applications
+  # will make fairly laser-specific assumptions about this data
+
+  Header header            # timestamp in the header is the acquisition time of 
+                           # the first ray in the scan.
+                           #
+                           # in frame frame_id, angles are measured around 
+                           # the positive Z axis (counterclockwise, if Z is up)
+                           # with zero angle being forward along the x axis
+
+  float32 angle_min        # start angle of the scan [rad]
+  float32 angle_max        # end angle of the scan [rad]
+  float32 angle_increment  # angular distance between measurements [rad]
+
+  float32 time_increment   # time between measurements [seconds] - if your scanner
+                           # is moving, this will be used in interpolating position
+                           # of 3d points
+  float32 scan_time        # time between scans [seconds]
+
+  float32 range_min        # minimum range value [m]
+  float32 range_max        # maximum range value [m]
+                            
+                           
+  float32[] ranges         # 单位为m 
+                           # range data [m] (Note: values < range_min or > range_max should be discarded)
+                           
+  float32[] intensities    # 假设强度为 0.8-1.2 的时候对应的激光束测量到遮挡物
+                           # intensity data [device-specific units].  If your
+                           # device does not provide intensities, please leave
+                           # the array empty.
+                      ```
