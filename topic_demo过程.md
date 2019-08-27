@@ -172,5 +172,7 @@ vi gps.msg
   float32[] intensities    # 假设强度为 0.8-1.2 的时候对应的激光束测量到遮挡物
                            # intensity data [device-specific units].  If your
                            # device does not provide intensities, please leave
-                           # the array empty.
-                      ```
+                          # the array empty.
+```
+                          
+                    
