@@ -58,6 +58,9 @@
 + 知乎地址:https://zhuanlan.zhihu.com/p/40025902
 + zbar_opencv教程:https://blog.csdn.net/qq_33422184/article/details/77482015
 
+# pocketsphinx
++ ROSWIKI：http://wiki.ros.org/pocketsphinx
++ 另外`ROS开发与实践（胡春旭）`这本书上有详细的配置和使用教程。
 
 # 附录
 
