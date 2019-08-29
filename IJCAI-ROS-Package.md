@@ -59,8 +59,9 @@
 + zbar_opencv教程:https://blog.csdn.net/qq_33422184/article/details/77482015
 
 
+# 附录
 
-# ORK
+## ORK
 
 + ROS下的物品识别集成套件
 
@@ -75,7 +76,7 @@
   ```
   - 将`ork_render`程序包中的`CMakeList.txt`当中的`mesa`方法修改为`GLUT`方法,[参考地址](https://github.com/JimmyDaSilva/ork_renderer/commit/4bdd53e3c418e7d02be0212ece04598619b4323a)
   - **OpenCV Error**: 由于kinectV2的分辨率所导致需要修改`/linemod/conf`文件夹下的`traning.ork`配置文件。以及`/linemod/src`文件夹下的`linemod_detect.cpp`文件.[参考地址](https://github.com/wg-perception/linemod/issues/28#issuecomment-200927751)
-    + 修改玩以后别忘记 `catkin_make` 以及 `source` 
+    + 修改完成以后别忘记 `catkin_make` 以及 `source` 
   ```shell
   rosrun topic_tools relay /kinect2/qhd/image_depth_rect /camera/depth_registered/image_raw
   rosrun topic_tools relay /kinect2/qhd/image_color_rect /camera/rgb/image_rect_color
@@ -88,6 +89,9 @@
   
   rosrun tf static_transform_publisher 0 0 0 0 0 0 kinect2_ir_opticalrame camera_depth_optical_frame 40
   ```
-
-  
+## 安装CUDA(Compute Unified Device Architecture，统一计算架构[1])、CUDNN以及Nvidia驱动
+ + 可参考马炜杰学长的博文：https://blog.csdn.net/DragonGirI/article/details/97614130
+ + 名词解释：
+   + cuDNN（CUDA Deep Neural Network library）：是NVIDIA打造的针对深度神经网络的加速库，是一个用于深层神经网络的GPU加速库。如果你要用GPU训练模型，cuDNN不是必须的，但是一般会采用这个加速库。
+   + 知乎链接：[显卡、显卡驱动、cuda 之间的关系是什么？](https://www.zhihu.com/question/59184480)
 
