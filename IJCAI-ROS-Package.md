@@ -11,7 +11,7 @@
 
 + 通过`lsusb`查看摄像头对应的信息
 + 在[这里](http://www.ideasonboard.org/uvc/#devices)查找设备ID，如果ID在此列表则是uvc_cam，否则是usb_cam。已知Kinect2是usb_cam
-+ ROS_WIKI[A ROS Driver for V4L USB Cameras](http://wiki.ros.org/usb_cam)
++ ROS_WIKI：[A ROS Driver for V4L USB Cameras](http://wiki.ros.org/usb_cam)
  + Bug / feature tracker: https://github.com/bosch-ros-pkg/usb_cam/issues
  + Source: git https://github.com/ros-drivers/usb_cam.git (branch: develop)
 [安装教程](https://www.jianshu.com/p/e0d96f55f307)
