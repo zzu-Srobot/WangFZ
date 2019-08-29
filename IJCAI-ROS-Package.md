@@ -8,13 +8,13 @@
 + This command magically installs all the packages that the packages in your catkin workspace depend upon but are missing on your computer.
 
 # usb_cam安装
-
++ [安装教程](https://www.jianshu.com/p/e0d96f55f307)
 + 通过`lsusb`查看摄像头对应的信息
 + 在[这里](http://www.ideasonboard.org/uvc/#devices)查找设备ID，如果ID在此列表则是uvc_cam，否则是usb_cam。已知Kinect2是usb_cam
 + ROS_WIKI：[A ROS Driver for V4L USB Cameras](http://wiki.ros.org/usb_cam)
  + Bug / feature tracker: https://github.com/bosch-ros-pkg/usb_cam/issues
  + Source: git https://github.com/ros-drivers/usb_cam.git (branch: develop)
-[安装教程](https://www.jianshu.com/p/e0d96f55f307)
+
 # iai_kinect
 + `kinect2`的`ros`软件包.该软件包发布了`kinect2`捕捉的图像话题
 + github链接：https://github.com/code-iai/iai_kinect2
