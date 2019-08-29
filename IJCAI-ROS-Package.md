@@ -5,6 +5,7 @@
 # 安装依赖
 
 `rosdep install --from-paths src --ignore-src -r -y`
++ This command magically installs all the packages that the packages in your catkin workspace depend upon but are missing on your computer.
 
 # usb_cam安装
 
