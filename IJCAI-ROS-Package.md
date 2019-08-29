@@ -100,3 +100,15 @@
    + cuDNN（CUDA Deep Neural Network library）：是NVIDIA打造的针对深度神经网络的加速库，是一个用于深层神经网络的GPU加速库。如果你要用GPU训练模型，cuDNN不是必须的，但是一般会采用这个加速库。
    + 知乎链接：[显卡、显卡驱动、cuda 之间的关系是什么？](https://www.zhihu.com/question/59184480)
 
+## PIP 下载过慢
+
++ 创建`~/.pip/pip.conf`
++ 添加如下内容
+
+```
+[global] 
+index-url = http://pypi.douban.com/simple 
+[install] 
+trusted-host=pypi.douban.com
+```
+
