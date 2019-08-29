@@ -61,6 +61,8 @@
 
 # 附录
 
+##  ROS WIKI-底盘控制：[velocity commands](http://wiki.ros.org/Robots/TIAGo/Tutorials/motions/cmd_vel)
+
 ## ORK
 
 + ROS下的物品识别集成套件
